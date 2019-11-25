@@ -2,7 +2,6 @@ import * as Koa from 'koa';
 import * as serve from 'koa-static';
 import * as bodyParser from 'koa-bodyparser';
 import * as logger from 'koa-logger';
-import * as cors from '@koa/cors';
 import * as json from 'koa-json';
 
 import * as path from 'path';
@@ -15,8 +14,6 @@ app.use(logger());
 app.use(serve(path.join(__dirname, 'public') ));
 // bodyParser
 app.use(bodyParser());
-// cors
-app.use(cors());
 // json
 app.use(json());
 
